@@ -11,10 +11,10 @@ type TimeFindIn struct {
 }
 
 func (t *TimeFindIn) From(args []string) error {
-	if len(args) != 1 {
-		return errors.New(fmt.Sprintf("error args len should be 1, but have:%d", len(args)))
+	if len(args) != 2 {
+		return errors.New(fmt.Sprintf("error args len should be 2, but have:%d", len(args)))
 	}
-	t.Log = args[0]
+	t.Log = args[1]
 	return nil
 }
 
